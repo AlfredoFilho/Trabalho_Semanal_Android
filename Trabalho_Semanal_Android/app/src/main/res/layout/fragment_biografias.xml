@@ -1,0 +1,61 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="a193532_c195741.ft.unicamp.br.aula03.alunos.BiografiasFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="30dp">
+
+        <ImageView
+            android:id="@+id/imgAluno"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:paddingLeft="5dp"
+            android:layout_gravity="center"/>
+
+
+        <TextView
+            android:id="@+id/txtBiografia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:maxLines="5"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAnterior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingLeft="15dp"
+            android:text="Anterior">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btnProximo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingRight="15dp"
+            android:text="Próximo">
+
+        </Button>
+      </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+</FrameLayout>
