@@ -1,7 +1,7 @@
-#Thu Oct 03 18:26:44 BRT 2019
-base.0=/home/alfredo/Downloads/projeto-android/app/build/intermediates/dex/debug/mergeExtDexDebug/out
+#Fri Oct 04 20:54:26 BRT 2019
+base.0=/home/a193532/Downloads/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/dex/debug/mergeExtDexDebug/out
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/home/alfredo/Downloads/projeto-android/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
+base.1=/home/a193532/Downloads/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/dex/debug/mergeProjectDexDebug/out

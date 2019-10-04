@@ -1,5 +1,6 @@
 package a193532_c195741.ft.unicamp.br.aula03;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -19,6 +20,7 @@ import android.widget.Toast;
 
 import a193532_c195741.ft.unicamp.br.aula03.alunos.AlunosFragment;
 import a193532_c195741.ft.unicamp.br.aula03.alunos.BiografiasFragment;
+import a193532_c195741.ft.unicamp.br.aula03.kotlin.KotlinActivity;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.PuzzleFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -119,9 +121,6 @@ public class MainActivity extends AppCompatActivity
                     }
                 });
             }
-
-
-
             replaceFragment(alunosFragment, "alunos_fragment");
         } else if (id == R.id.nav_biografias) {
             Fragment biografiaFragment = fragmentManager.findFragmentByTag("biografias_Fragment");
@@ -135,6 +134,9 @@ public class MainActivity extends AppCompatActivity
             replaceFragment(puzzleFragment, "puzzle_Fragment");
         } else if (id == R.id.nav_jogo2) {
             Toast.makeText(this, "Você pressionou  o botão jogo 2", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_Kotlin){
+            Intent intent = new Intent(this, KotlinActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

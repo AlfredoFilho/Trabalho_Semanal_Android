@@ -1232,6 +1232,7 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id nav_Kotlin
 id nav_alunos
 id nav_autores
 id nav_biografias
@@ -1389,6 +1390,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_kotlin
 layout activity_main
 layout adapter_layout
 layout app_bar_main

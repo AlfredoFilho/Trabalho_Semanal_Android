@@ -1,4 +1,8 @@
 <resources>
+    <array name="grid_options">
+        <item>Gislaine</item>
+        <item>Rodrigo</item>
+    </array>
     <string name="app_name">Meu Primeiro App</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -6,20 +10,16 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="action_contato">Contato</string>
 
     <?Autores?>
+    <string name="action_contato">Contato</string>
     <string name="alfredo_bio">Alfredo Albélis, nascido em Campinas, atualmente mora em Paulínia,
         faz graduação em Sistemas de Informação na UNICAMP, está no 3º ano.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="cleofas_bio">Nascido em Campinas - SP, apaixonado por tecnologia e negócios, atualmente cursa
         Sistemas de Informação na Unicamp.</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
-    <array name="grid_options">
-        <item>Gislaine</item>
-        <item>Rodrigo</item>
-    </array>
 
 </resources>
