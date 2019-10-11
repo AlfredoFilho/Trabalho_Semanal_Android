@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/a193532/Downloads/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
+            "outputFile": "/home/a193532/Vídeos/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
             "map": [
                 {
                     "source": "/home/a193532/.gradle/caches/transforms-2/files-2.1/25dcced0b7302b6da8fbb37dbcebbcac/res/values-large-v4/values-large-v4.xml",

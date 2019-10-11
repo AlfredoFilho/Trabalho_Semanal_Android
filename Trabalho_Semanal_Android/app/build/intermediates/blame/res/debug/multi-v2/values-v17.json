@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/a193532/Downloads/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml",
+            "outputFile": "/home/a193532/Vídeos/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml",
             "map": [
                 {
                     "source": "/home/a193532/.gradle/caches/transforms-2/files-2.1/5d82ac1de75fb79355d689e651cf0a75/res/values-v17/values-v17.xml",

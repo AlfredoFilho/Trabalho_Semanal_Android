@@ -1,11 +1,11 @@
 #Internal package file, do not edit.
-#Fri Oct 04 20:54:27 BRT 2019
-1.base=/home/a193532/Downloads/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
+#Fri Oct 11 19:25:14 BRT 2019
+1.base=/home/a193532/Vídeos/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
 0.baseType=DIRECTORY
 1.baseType=DIRECTORY
 count=2
 1.set=DEX
 0.path=classes.dex
 0.set=DEX
-0.base=/home/a193532/Downloads/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/dex/debug/mergeExtDexDebug/out
+0.base=/home/a193532/Vídeos/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/dex/debug/mergeExtDexDebug/out
 1.path=classes.dex
