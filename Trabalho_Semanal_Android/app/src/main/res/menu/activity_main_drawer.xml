@@ -28,6 +28,11 @@
             android:id="@+id/nav_Kotlin"
             android:icon="@drawable/ic_menu_manage"
             android:title="Kotlin" />
+        <item
+            android:id="@+id/nav_database"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Banco de dados" />
+
 
     </group>
 

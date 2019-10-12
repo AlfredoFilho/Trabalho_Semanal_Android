@@ -40,6 +40,7 @@ class KotlinActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
+
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
@@ -59,7 +60,13 @@ class KotlinActivity : AppCompatActivity() {
             textView.setText(memoria)
             Toast.makeText(this, "Valor Resgatado", Toast.LENGTH_SHORT).show()
         }
+        if (intent != null){
+            textView.setText(intent.getStringExtra("chave"))
+        }
 
+        if (savedInstanceState != null){
+            memoria = savedInstanceState.getString("chave", "")
+        }
 
     }
 
@@ -72,6 +79,11 @@ class KotlinActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle){
+        super.onSaveInstanceState(outState)
+        outState.putString("chave", memoria);
     }
 
     override fun onStart(){

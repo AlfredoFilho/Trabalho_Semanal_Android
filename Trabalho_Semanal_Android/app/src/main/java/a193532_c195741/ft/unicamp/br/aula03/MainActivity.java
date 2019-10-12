@@ -20,7 +20,9 @@ import android.widget.Toast;
 
 import a193532_c195741.ft.unicamp.br.aula03.alunos.AlunosFragment;
 import a193532_c195741.ft.unicamp.br.aula03.alunos.BiografiasFragment;
+import a193532_c195741.ft.unicamp.br.aula03.database.DatabaseFragment;
 import a193532_c195741.ft.unicamp.br.aula03.kotlin.KotlinActivity;
+import a193532_c195741.ft.unicamp.br.aula03.puzzle.NameFragment;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.PuzzleFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -133,10 +135,20 @@ public class MainActivity extends AppCompatActivity
                 puzzleFragment = new PuzzleFragment();
             replaceFragment(puzzleFragment, "puzzle_Fragment");
         } else if (id == R.id.nav_jogo2) {
-            Toast.makeText(this, "Você pressionou  o botão jogo 2", Toast.LENGTH_SHORT).show();
+            Fragment nameFragment  = fragmentManager.findFragmentByTag("name_Fragment");
+            if (nameFragment == null)
+                nameFragment = new NameFragment();
+            replaceFragment(nameFragment, "name_Fragment");
         } else if (id == R.id.nav_Kotlin){
             Intent intent = new Intent(this, KotlinActivity.class);
+            intent.putExtra("chave","string inicial");
             startActivity(intent);
+        }
+        else if (id == R.id.nav_database){
+            Fragment databaseFragment = fragmentManager.findFragmentByTag("database_Fragment");
+            if (databaseFragment == null)
+                databaseFragment = new DatabaseFragment();
+            replaceFragment(databaseFragment, "database_Fragment");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
