@@ -26,7 +26,7 @@ import a193532_c195741.ft.unicamp.br.aula03.puzzle.NameFragment;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.PuzzleFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, AlunosFragment.OnBiografiaRequest {
 
     FragmentManager fragmentManager;
 
@@ -135,10 +135,12 @@ public class MainActivity extends AppCompatActivity
                 puzzleFragment = new PuzzleFragment();
             replaceFragment(puzzleFragment, "puzzle_Fragment");
         } else if (id == R.id.nav_jogo2) {
-            Fragment nameFragment  = fragmentManager.findFragmentByTag("name_Fragment");
-            if (nameFragment == null)
+            NameFragment nameFragment = (NameFragment) fragmentManager.findFragmentByTag("name");
+            if (nameFragment == null) {
                 nameFragment = new NameFragment();
-            replaceFragment(nameFragment, "name_Fragment");
+                nameFragment.setOnBiografiaRequest(this);
+            }
+            replaceFragment(nameFragment, "name");
         } else if (id == R.id.nav_Kotlin){
             Intent intent = new Intent(this, KotlinActivity.class);
             intent.putExtra("chave","string inicial");
@@ -169,5 +171,15 @@ public class MainActivity extends AppCompatActivity
             autoresFragment = new AutoresFragment();
         autoresFragment.setMailContent(mensagem);
         replaceFragment(autoresFragment, "autores_fragment");
+    }
+
+    @Override
+    public void setPosition(int position) {
+        BiografiasFragment biografiasFragment = (BiografiasFragment) fragmentManager.findFragmentByTag("biografias");
+        if (biografiasFragment == null) {
+            biografiasFragment = new BiografiasFragment();
+        }
+        biografiasFragment.atualizaBiografia(position);
+        replaceFragment(biografiasFragment, "biografias");
     }
 }

@@ -19,7 +19,7 @@ public class AlunosFragment extends Fragment {
     View view;
     RecyclerView mRecyclerView;
     MyFirstAdapter mAdapter;
-    private OnReplaceRequeste onReplaceRequeste;
+    private OnReplaceRequests onReplaceRequests;
     private OnBiografiaRequest onBiografiaRequest;
     AbrirBiografiaAluno abrirBiografiaAluno;
 
@@ -40,8 +40,8 @@ public class AlunosFragment extends Fragment {
         void setPosition(int position);
     }
 
-    public void setOnReplaceRequeste(OnReplaceRequeste onReplaceRequeste) {
-        this.onReplaceRequeste = onReplaceRequeste;
+    public void setOnReplaceRequeste(OnReplaceRequests onReplaceRequests) {
+        this.onReplaceRequests = onReplaceRequests;
     }
 
     public void setMyOnBiografiaRequest(OnBiografiaRequest onBiografiaRequest){
@@ -50,7 +50,7 @@ public class AlunosFragment extends Fragment {
 
 
 
-    public interface OnReplaceRequeste{
+    public interface OnReplaceRequests {
          void setReplace(int position);
     }
 

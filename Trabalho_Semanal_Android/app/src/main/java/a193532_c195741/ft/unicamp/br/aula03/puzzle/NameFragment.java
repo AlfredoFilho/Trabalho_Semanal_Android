@@ -91,7 +91,7 @@ public class NameFragment extends Fragment {
                     numTentativas--;
                     txtTentativas.setText("Tentativas: " + numTentativas);
 
-                    if (numTentativas == 0) {
+                    if (numTentativas <= 0) {
                         txtFeedback.setText("Você Perdeu!!");
 
                         new Handler().postDelayed(
@@ -99,7 +99,7 @@ public class NameFragment extends Fragment {
                                     @Override
                                     public void run() {
                                         if (onBiografiaRequest != null) {
-                                            //onBiografiaRequest.onRequest(positionAluno);
+                                            onBiografiaRequest.setPosition(positionAluno);
                                         }
                                     }
                                 }, 2000);
