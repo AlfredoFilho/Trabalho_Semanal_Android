@@ -1148,6 +1148,7 @@ id action_container
 id action_contato
 id action_context_bar
 id action_divider
+id action_estatisticas
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -1478,6 +1479,7 @@ layout fragment_alunos
 layout fragment_autores
 layout fragment_biografias
 layout fragment_database
+layout fragment_estatisticas
 layout fragment_first
 layout fragment_gallery
 layout fragment_home
@@ -1558,6 +1560,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string action_contato
+string action_estatisticas
 string action_settings
 string alfredo_bio
 string app_name

@@ -21,9 +21,10 @@ import android.widget.Toast;
 import a193532_c195741.ft.unicamp.br.aula03.alunos.AlunosFragment;
 import a193532_c195741.ft.unicamp.br.aula03.alunos.BiografiasFragment;
 import a193532_c195741.ft.unicamp.br.aula03.database.DatabaseFragment;
+import a193532_c195741.ft.unicamp.br.aula03.database.EstatisticasFragment;
 import a193532_c195741.ft.unicamp.br.aula03.kotlin.KotlinActivity;
-import a193532_c195741.ft.unicamp.br.aula03.puzzle.NameFragment;
-import a193532_c195741.ft.unicamp.br.aula03.puzzle.PuzzleFragment;
+import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo2.NameFragment;
+import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo1.PuzzleFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, AlunosFragment.OnBiografiaRequest {
@@ -93,6 +94,12 @@ public class MainActivity extends AppCompatActivity
                 mailFragment = new MailFragment();
             }
             replaceFragment(mailFragment, "mail_fragment");
+        }else if (id == R.id.action_estatisticas) {
+            Fragment estatisticasFragment = fragmentManager.findFragmentByTag("estatisticas_fragment");
+            if (estatisticasFragment == null) {
+                estatisticasFragment = new EstatisticasFragment();
+            }
+            replaceFragment(estatisticasFragment, "estatisticas_fragment");
         }
 
         return super.onOptionsItemSelected(item);
