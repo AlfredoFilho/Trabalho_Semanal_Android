@@ -1,7 +1,7 @@
-#Mon Oct 14 13:43:28 BRT 2019
-base.0=/home/c195741/Downloads/Trabalho_Semanal_Android-master/Trabalho_Semanal_Android/app/build/intermediates/dex/debug/mergeExtDexDebug/out
+#Tue Oct 15 17:24:20 BRT 2019
+base.0=/home/a193532/Música/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/dex/debug/mergeExtDexDebug/out
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/home/c195741/Downloads/Trabalho_Semanal_Android-master/Trabalho_Semanal_Android/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
+base.1=/home/a193532/Música/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/dex/debug/mergeProjectDexDebug/out

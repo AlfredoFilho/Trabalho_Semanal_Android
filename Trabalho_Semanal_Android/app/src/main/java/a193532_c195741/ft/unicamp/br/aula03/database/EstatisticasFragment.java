@@ -42,13 +42,30 @@ public class EstatisticasFragment extends Fragment {
         dbHelper.close();
 
     }
-    public void onInserir(String nome) {
-
+    public void onInserirTableImg(String nome) {
 
         ContentValues contentValues = new ContentValues();
         contentValues.put("nome", nome);
 
-        sqLiteDatabase.insert("Estatistica", null, contentValues);
+        sqLiteDatabase.insert("MaisErradoImagem", null, contentValues);
     }
+
+    public void onInserirTableBtn(String nome) {
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("nome", nome);
+
+        sqLiteDatabase.insert("MaisErradoBotao", null, contentValues);
+    }
+
+    public void onInserirTablePorcAmostral(String porcent) {
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("porcent", porcent);
+
+        sqLiteDatabase.insert("PorcentAmostral", null, contentValues);
+    }
+
+
 }
 

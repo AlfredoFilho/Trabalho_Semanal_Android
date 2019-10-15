@@ -27,7 +27,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "(_id INTEGER PRIMARY KEY, " +
                 "Texto Text);");
 
-        db.execSQL("CREATE TABLE Estatisticas (_id INTEGER PRIMARY KEY AUTOINCREMENT, nome Text, qtdErro integer);");
+        db.execSQL("CREATE TABLE MaisErradoImagem (_id INTEGER PRIMARY KEY AUTOINCREMENT, nome Text);");
+        db.execSQL("CREATE TABLE MaisErradoBotao (_id INTEGER PRIMARY KEY AUTOINCREMENT, nome Text);");
+        db.execSQL("CREATE TABLE PorcentAmostral (_id INTEGER PRIMARY KEY AUTOINCREMENT, porcent Text);");
     }
 
     @Override

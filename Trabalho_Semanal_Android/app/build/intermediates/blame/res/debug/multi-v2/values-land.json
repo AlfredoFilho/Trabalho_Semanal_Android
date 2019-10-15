@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "/home/c195741/Downloads/Trabalho_Semanal_Android-master/Trabalho_Semanal_Android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "/home/a193532/Música/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/home/c195741/.gradle/caches/transforms-2/files-2.1/1bd3644f3358cad9e95c8c4811332020/res/values-land/values-land.xml",
+                    "source": "/home/a193532/.gradle/caches/transforms-2/files-2.1/5d82ac1de75fb79355d689e651cf0a75/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                },
+                {
+                    "source": "/home/a193532/.gradle/caches/transforms-2/files-2.1/25dcced0b7302b6da8fbb37dbcebbcac/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "8",
                         "endColumns": "10",
                         "endOffsets": "431"
-                    }
-                },
-                {
-                    "source": "/home/c195741/.gradle/caches/transforms-2/files-2.1/3eed9871edb60449b27a389b1a8cc623/res/values-land/values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,125,196",
-                        "endColumns": "69,70,67",
-                        "endOffsets": "120,191,259"
                     }
                 }
             ]

@@ -23,8 +23,6 @@ import java.util.Map;
 
 import a193532_c195741.ft.unicamp.br.aula03.alunos.AlunosFragment.OnBiografiaRequest;
 
-
-
 public class NameFragment extends Fragment {
 
     private View lview;
@@ -33,13 +31,17 @@ public class NameFragment extends Fragment {
     private String nomeCorreto;
     private int positionAluno;
     private int numTentativas;
+    private float porcentAmostral;
+    private float qtdErros;
+    private float qtdJogadas;
     private ArrayList<Aluno> alunosList = new ArrayList(Arrays.asList(Alunos.alunos));
     private ImageView imageView;
     private TextView txtTentativas;
     private TextView txtFeedback;
     private ArrayList<Button> arrayListButton;
 
-    Map mapAlunos = new HashMap();
+    Map mapAlunoMaisErrado = new HashMap();
+    Map mapAlunoBotaoMaisErrado = new HashMap();
 
     private OnBiografiaRequest onBiografiaRequest;
 
@@ -56,11 +58,6 @@ public class NameFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        for(Aluno aluno : alunosList){
-            mapAlunos.put(aluno.getNome(),0);
-        }
-
 
         if (lview == null) {
             lview = inflater.inflate(R.layout.fragment_name, container, false);
@@ -99,26 +96,24 @@ public class NameFragment extends Fragment {
                 } else {
                     txtFeedback.setText("Incorreto!!");
 
-                    Aluno aluno = Alunos.alunos[positionAluno];
-                    Integer num = (Integer) mapAlunos.get(aluno.getNome());
-                    mapAlunos.remove(aluno.getNome());
-                    mapAlunos.put(aluno.getNome(),++num);
-
-                    System.out.println(mapAlunos);
+                    estatistica(nomeEscolhido, nomeCorreto);
 
                     numTentativas--;
-                    System.out.println(nomeCorreto);
-                    System.out.println(nomeEscolhido);
                     txtTentativas.setText("Tentativas: " + numTentativas);
 
                     if (numTentativas <= 0) {
-                        txtFeedback.setText("Você Perdeu!!");
+                        txtFeedback.setText("VocÃŠ Perdeu!!");
 
                         new Handler().postDelayed(
                                 new Runnable() {
                                     @Override
                                     public void run() {
                                         if (onBiografiaRequest != null) {
+
+                                            qtdErros++;
+                                            porcentAmostral = qtdErros / qtdJogadas;
+                                            System.out.println("Porcentagem: " + porcentAmostral);
+
                                             onBiografiaRequest.setPosition(positionAluno);
 
                                         }
@@ -138,7 +133,43 @@ public class NameFragment extends Fragment {
         return lview;
     }
 
+    private void estatistica(String nomeEscolhido, String nomeCorreto){
+
+        Boolean value = mapAlunoMaisErrado.containsKey(nomeCorreto);
+        if (value == true) {
+            Integer aux = (Integer) mapAlunoMaisErrado.get(nomeCorreto);
+            mapAlunoMaisErrado.remove(nomeCorreto);
+            mapAlunoMaisErrado.put(nomeCorreto, ++aux);
+        } else {
+            int aux = 1;
+            mapAlunoMaisErrado.put(nomeCorreto, aux);
+        }
+
+        Boolean value2 = mapAlunoBotaoMaisErrado.containsKey(nomeEscolhido);
+        if (value2 == true) {
+            Integer qtd = (Integer) mapAlunoBotaoMaisErrado.get(nomeEscolhido);
+            mapAlunoBotaoMaisErrado.remove(nomeEscolhido);
+            mapAlunoBotaoMaisErrado.put(nomeEscolhido, ++qtd);
+        } else {
+            int qtd = 1;
+            mapAlunoBotaoMaisErrado.put(nomeEscolhido, qtd);
+        }
+
+     /*
+        mapAlunoMaisErrado.keySet().toArray()[0] #Primeiro key
+        mapAlunoMaisErrado.values().toArray()[0] #Primeiro value
+
+        mapAlunoBotaoMaisErrado.keySet().toArray()[0] #Primeiro key
+        mapAlunoBotaoMaisErrado.values().toArray()[0] #Primeiro value
+    */
+
+    System.out.println("-------------------------------------------" +
+                "\nAluno mais errado (imagem): " + mapAlunoMaisErrado.keySet().toArray()[0] +
+                "\nAluno mais errado (botão): " + mapAlunoBotaoMaisErrado.keySet().toArray()[0]);
+    }
+
     private void startGame() {
+        qtdJogadas++;
         int guess = random.nextInt(Alunos.alunos.length);
         positionAluno = guess;
         Aluno aluno = Alunos.alunos[guess];
