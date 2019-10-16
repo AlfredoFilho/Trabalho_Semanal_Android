@@ -1367,6 +1367,9 @@ id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id text
 id text2
+id textErroBtn
+id textErroImg
+id textPorcent
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart

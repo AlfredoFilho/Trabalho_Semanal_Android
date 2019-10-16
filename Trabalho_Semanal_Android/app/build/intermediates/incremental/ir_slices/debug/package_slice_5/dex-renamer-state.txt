@@ -1,0 +1,4 @@
+#Wed Oct 16 17:16:00 BRT 2019
+base.0=/home/a193532/Downloads/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/transforms/dexMerger/debug/5
+path.0=classes.dex
+renamed.0=classes.dex

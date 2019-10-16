@@ -21,7 +21,7 @@ import android.widget.Toast;
 import a193532_c195741.ft.unicamp.br.aula03.alunos.AlunosFragment;
 import a193532_c195741.ft.unicamp.br.aula03.alunos.BiografiasFragment;
 import a193532_c195741.ft.unicamp.br.aula03.database.DatabaseFragment;
-import a193532_c195741.ft.unicamp.br.aula03.database.EstatisticasFragment;
+import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo2.EstatisticasFragment;
 import a193532_c195741.ft.unicamp.br.aula03.kotlin.KotlinActivity;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo2.NameFragment;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo1.PuzzleFragment;
