@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Random;
 import a193532_c195741.ft.unicamp.br.aula03.alunos.Aluno;
 import a193532_c195741.ft.unicamp.br.aula03.alunos.Alunos;
@@ -38,17 +40,13 @@ public class NameFragment extends Fragment {
     private String nomeCorreto;
     private int positionAluno;
     private int numTentativas;
-    private float porcentAmostral;
-    private float qtdErros;
-    private float qtdJogadas;
+    private Float acerto = 0.0f;
+    private Float erro = 0.0f;
     private ArrayList<Aluno> alunosList = new ArrayList(Arrays.asList(Alunos.alunos));
     private ImageView imageView;
     private TextView txtTentativas;
     private TextView txtFeedback;
     private ArrayList<Button> arrayListButton;
-
-    Map mapAlunoMaisErrado = new HashMap();
-    Map mapAlunoBotaoMaisErrado = new HashMap();
 
     private OnBiografiaRequest onBiografiaRequest;
 
@@ -69,6 +67,8 @@ public class NameFragment extends Fragment {
         if (lview == null) {
             lview = inflater.inflate(R.layout.fragment_name, container, false);
         }
+
+        getActivity().setTitle("Jogo 2");
 
         imageView = lview.findViewById(R.id.imageFoto);
         txtTentativas = lview.findViewById(R.id.txtTentativas);
@@ -103,13 +103,14 @@ public class NameFragment extends Fragment {
                 } else {
                     txtFeedback.setText("Incorreto!!");
 
-                    estatistica(nomeEscolhido, nomeCorreto);
+                    onInserirTableImg(nomeCorreto);
+                    onInserirTableBtn(nomeEscolhido);
 
                     numTentativas--;
                     txtTentativas.setText("Tentativas: " + numTentativas);
 
                     if (numTentativas <= 0) {
-                        txtFeedback.setText("VocÃŠ Perdeu!!");
+                        txtFeedback.setText("Você Perdeu!!");
 
                         new Handler().postDelayed(
                                 new Runnable() {
@@ -117,10 +118,7 @@ public class NameFragment extends Fragment {
                                     public void run() {
                                         if (onBiografiaRequest != null) {
 
-                                            qtdErros++;
-                                            porcentAmostral = qtdErros / qtdJogadas;
-                                            onInserirTablePorcAmostral(String.valueOf(porcentAmostral));
-                                            onCulsultaPorc();
+                                            erro = erro + 1.0f;
 
                                             onBiografiaRequest.setPosition(positionAluno);
 
@@ -141,67 +139,10 @@ public class NameFragment extends Fragment {
         return lview;
     }
 
-    private void estatistica(String nomeEscolhido, String nomeCorreto){
-
-        Boolean value = mapAlunoMaisErrado.containsKey(nomeCorreto);
-        if (value == true) {
-            Integer aux = (Integer) mapAlunoMaisErrado.get(nomeCorreto);
-            mapAlunoMaisErrado.remove(nomeCorreto);
-            mapAlunoMaisErrado.put(nomeCorreto, ++aux);
-        } else {
-            int aux = 1;
-            mapAlunoMaisErrado.put(nomeCorreto, aux);
-        }
-
-        Boolean value2 = mapAlunoBotaoMaisErrado.containsKey(nomeEscolhido);
-        if (value2 == true) {
-            Integer qtd = (Integer) mapAlunoBotaoMaisErrado.get(nomeEscolhido);
-            mapAlunoBotaoMaisErrado.remove(nomeEscolhido);
-            mapAlunoBotaoMaisErrado.put(nomeEscolhido, ++qtd);
-        } else {
-            int qtd = 1;
-            mapAlunoBotaoMaisErrado.put(nomeEscolhido, qtd);
-        }
-
-        System.out.println("-----------------------");
-        System.out.println("MapAlunoMaisErrado: " + mapAlunoMaisErrado);
-
-        /*Pegar o maior value do MAP, encontrar o key e inserir na tabela*/
-        int maxValueInMap = (Integer) (Collections.max(mapAlunoMaisErrado.values()));
-        Iterator<Map.Entry<Integer, Integer>> it = mapAlunoMaisErrado.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry<Integer, Integer> pair = it.next();
-            if(maxValueInMap == pair.getValue()){
-
-                String nomeMax = String.valueOf(pair.getKey());
-                int qtdMax = pair.getValue();
-
-                onInserirTableImg(nomeMax, qtdMax);
-            }
-        }
-
-        System.out.println("MapAlunoBotaoMaisErrado: " + mapAlunoBotaoMaisErrado);
-
-        /*Pegar o maior value do MAP, encontrar o key e inserir na tabela*/
-        int maxValueInMap2 = (Integer) (Collections.max(mapAlunoBotaoMaisErrado.values()));
-        Iterator<Map.Entry<Integer, Integer>> it2 = mapAlunoBotaoMaisErrado.entrySet().iterator();
-        while (it2.hasNext()) {
-            Map.Entry<Integer, Integer> pair = it2.next();
-            if(maxValueInMap2 == pair.getValue()){
-
-                String nomeMax = String.valueOf(pair.getKey());
-                int qtdMax = pair.getValue();
-
-                onInserirTableBtn(nomeMax, qtdMax);
-            }
-        }
-
-        onConsultaAB(1);
-        onConsultaAB(2);
-    }
-
     private void startGame() {
-        qtdJogadas++;
+
+        acerto = acerto + 1.0f;
+
         int guess = random.nextInt(Alunos.alunos.length);
         positionAluno = guess;
         Aluno aluno = Alunos.alunos[guess];
@@ -230,40 +171,137 @@ public class NameFragment extends Fragment {
 
     public void onStop() {
         super.onStop();
+        onInserirTablePorcAmostral(acerto, erro);
+        acerto = 0.0f;
+        erro = 0.0f;
         sqLiteDatabase.close();
         dbHelper.close();
     }
 
-    public void onInserirTableImg(String nome, int qtd) {
+    public List verificaExist(String nomeInsert, int AB){
 
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("nome", nome);
-        contentValues.put("qtd", qtd);
+        String sql = "";
+        if(AB == 1){
+            sql = "Select * from MaisErradoImagem";
+        }else if(AB == 2){
+            sql = "Select * from MaisErradoBotao";
+        }
 
-        //Apagar toda tabela pro novo insert
-        String tabela = "MaisErradoImagem";
-        sqLiteDatabase.execSQL("DELETE FROM " + tabela);
+        String nomeTabela;
+        List<String> list = new ArrayList<String>();
+        String existe = "false";
+        String qtd;
+        String id;
 
-        sqLiteDatabase.insert("MaisErradoImagem", null, contentValues);
+        Cursor cursor = sqLiteDatabase.rawQuery(sql, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                nomeTabela = cursor.getString(1);
+                if(nomeInsert.equals(nomeTabela)){
+                    existe = "true";
+                    id = cursor.getString(0);
+                    qtd = cursor.getString(2);
+                    list.add(existe);
+                    list.add(id);
+                    list.add(qtd);
+                }
+
+            } while (cursor.moveToNext());
+
+        }
+        cursor.close();
+        return list;
     }
 
-    public void onInserirTableBtn(String nome, int qtd) {
+    public void onInserirTableImg(String nome) {
 
         ContentValues contentValues = new ContentValues();
-        contentValues.put("nome", nome);
-        contentValues.put("qtd", qtd);
+        int qtd;
+        int id;
 
-        //Apagar toda tabela pro novo insert
-        String tabela = "MaisErradoBotao";
-        sqLiteDatabase.execSQL("DELETE FROM " + tabela);
+        List<String> list = verificaExist(nome, 1);
+        if(list != null && !list.isEmpty()){
+            if(list.get(0).equals("true")){
+                id = Integer.parseInt(list.get(1));
+                qtd = Integer.parseInt(list.get(2));
 
-        sqLiteDatabase.insert("MaisErradoBotao", null, contentValues);
+                qtd++;
+
+                contentValues.put("nome", nome);
+                contentValues.put("qtd", qtd);
+
+                sqLiteDatabase.update("MaisErradoImagem", contentValues, "_id="+id, null);
+            }else{
+                ;
+            }
+
+        }else{
+            qtd = 1;
+            contentValues.put("nome", nome);
+            contentValues.put("qtd", qtd);
+
+            sqLiteDatabase.insert("MaisErradoImagem", null, contentValues);
+        }
     }
 
-    public void onInserirTablePorcAmostral(String porcent) {
+    public void onInserirTableBtn(String nome) {
 
         ContentValues contentValues = new ContentValues();
-        contentValues.put("porcent", porcent);
+        int qtd;
+        int id;
+
+        List<String> list = verificaExist(nome, 2);
+        if(list != null && !list.isEmpty()){
+            if(list.get(0).equals("true")){
+                id = Integer.parseInt(list.get(1));
+                qtd = Integer.parseInt(list.get(2));
+
+                qtd++;
+
+                contentValues.put("nome", nome);
+                contentValues.put("qtd", qtd);
+
+                sqLiteDatabase.update("MaisErradoBotao", contentValues, "_id="+id, null);
+            }else{
+                ;
+            }
+
+        }else{
+            qtd = 1;
+            contentValues.put("nome", nome);
+            contentValues.put("qtd", qtd);
+
+            sqLiteDatabase.insert("MaisErradoBotao", null, contentValues);
+        }
+
+    }
+
+    public void onInserirTablePorcAmostral(Float acerto, Float erro) {
+
+        ContentValues contentValues = new ContentValues();
+        String sql = "";
+        Float acertoTable = 0.0f;
+        Float erroTable = 0.0f;
+
+        sql = "Select * from PorcentAmostral";
+
+        Cursor cursor = sqLiteDatabase.rawQuery(sql, null);
+
+        //Verificar se a tabela está vazia
+        if(cursor.getCount() == 0){
+            contentValues.put("qtdJogadas", acerto);
+            contentValues.put("qtdErros", erro);
+        }else {
+            if (cursor.moveToFirst()) {
+                do {
+                    acertoTable = cursor.getFloat(1);
+                    erroTable = cursor.getFloat(2);
+                } while (cursor.moveToNext());
+            }
+            contentValues.put("qtdJogadas", acerto + acertoTable);
+            contentValues.put("qtdErros", erro + erroTable);
+        }
 
         //Apagar toda tabela pro novo insert
         String tabela = "PorcentAmostral";
@@ -272,51 +310,4 @@ public class NameFragment extends Fragment {
         sqLiteDatabase.insert("PorcentAmostral", null, contentValues);
     }
 
-    public void onCulsultaPorc(){
-        String tabela = "PorcentAmostral";
-        String sql = "Select * from PorcentAmostral";
-
-        Cursor cursor = sqLiteDatabase.rawQuery(sql, null);
-
-        if (cursor.moveToFirst()) {
-            do {
-                String porcentString = cursor.getString(1);
-                Float porcentagem = 100 * Float.parseFloat(porcentString);
-
-                System.out.println("CONSULTA "+ tabela + " -> Porcentagem de Erro: " + porcentagem);
-
-            } while (cursor.moveToNext());
-
-        }
-        cursor.close();
-    }
-
-    public void onConsultaAB(int exerc) {
-
-        String sql = "";
-        String tabela = "";
-
-        if(exerc == 1){
-            tabela = "MaisErradoImagem";
-            sql = "Select * from MaisErradoImagem";
-
-        }else if(exerc == 2){
-            tabela = "MaisErradoBotao";
-            sql = "Select * from MaisErradoBotao";
-        }
-
-        Cursor cursor = sqLiteDatabase.rawQuery(sql, null);
-
-        if (cursor.moveToFirst()) {
-            do {
-                String texto = cursor.getString(1);
-                int qtd = cursor.getInt(2);
-
-                System.out.println("CONSULTA "+ tabela + " -> Nome: " + texto + " Qtd: " +qtd);
-
-            } while (cursor.moveToNext());
-
-        }
-        cursor.close();
-    }
 }

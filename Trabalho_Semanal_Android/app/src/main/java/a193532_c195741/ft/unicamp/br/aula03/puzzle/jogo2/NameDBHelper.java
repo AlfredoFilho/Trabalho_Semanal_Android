@@ -20,7 +20,7 @@ public class NameDBHelper extends SQLiteOpenHelper {
 
         db.execSQL("CREATE TABLE MaisErradoImagem (_id INTEGER PRIMARY KEY AUTOINCREMENT, nome Text, qtd INTEGER);");
         db.execSQL("CREATE TABLE MaisErradoBotao (_id INTEGER PRIMARY KEY AUTOINCREMENT, nome Text, qtd INTEGER);");
-        db.execSQL("CREATE TABLE PorcentAmostral (_id INTEGER PRIMARY KEY AUTOINCREMENT, porcent Text);");
+        db.execSQL("CREATE TABLE PorcentAmostral (_id INTEGER PRIMARY KEY AUTOINCREMENT, qtdJogadas REAL, qtdErros REAL);");
     }
 
     @Override

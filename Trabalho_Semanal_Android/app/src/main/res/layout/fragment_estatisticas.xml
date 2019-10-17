@@ -34,13 +34,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="Aluno mais errado: " />
+                android:text="A) Pessoa mais errada: " />
 
             <TextView
                 android:id="@+id/textErroImg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="setar consulta" />
+                android:text=" - " />
         </LinearLayout>
 
         <LinearLayout
@@ -52,13 +52,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="Botão mais errado: " />
+                android:text="B) Pessoa botão mais errada: " />
 
             <TextView
                 android:id="@+id/textErroBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="setar consulta" />
+                android:text=" - " />
         </LinearLayout>
 
         <LinearLayout
@@ -70,10 +70,48 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="Porcentagem de Erro: " />
+                android:text="C) Porc. de Erro: " />
 
             <TextView
                 android:id="@+id/textPorcent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="setar consulta" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Nro. de jogos: " />
+
+            <TextView
+                android:id="@+id/textJogadas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="setar consulta" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Nro. de erros: " />
+
+            <TextView
+                android:id="@+id/textErros"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="setar consulta" />

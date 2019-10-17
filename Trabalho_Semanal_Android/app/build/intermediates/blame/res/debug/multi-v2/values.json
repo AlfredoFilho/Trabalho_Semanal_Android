@@ -1,8 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "/home/a193532/Downloads/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/home/a193532/Imagens/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
+                {
+                    "source": "/home/a193532/Imagens/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "3,15,10,17",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "54,525,374,617",
+                        "endLines": "8,15,13,17",
+                        "endColumns": "12,90,12,80",
+                        "endOffsets": "368,611,519,693"
+                    },
+                    "to": {
+                        "startLines": "2353,2359,2360,2364",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "144521,144840,144930,145080",
+                        "endLines": "2358,2359,2363,2364",
+                        "endColumns": "12,89,12,79",
+                        "endOffsets": "144835,144925,145075,145155"
+                    }
+                },
                 {
                     "source": "/home/a193532/.gradle/caches/transforms-2/files-2.1/3d00d8f0383eceeeb4a7d062f2616f6a/res/values/values.xml",
                     "from": {
@@ -97,25 +116,6 @@
                     }
                 },
                 {
-                    "source": "/home/a193532/Downloads/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "1,14,15,11,16,5,20,23,27,26,31,30,28,29,10,9,8,7,6,24",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "16,591,642,521,703,120,945,1110,1289,1246,1481,1436,1338,1391,459,384,324,248,174,1180",
-                        "endLines": "4,14,15,11,17,5,21,23,27,26,31,30,28,29,10,9,8,7,6,24",
-                        "endColumns": "12,50,60,52,84,53,51,69,48,42,42,44,52,44,61,74,59,75,73,64",
-                        "endOffsets": "115,637,698,569,881,169,1104,1175,1333,1284,1519,1476,1386,1431,516,454,379,319,243,1240"
-                    },
-                    "to": {
-                        "startLines": "2,2306,2307,2308,2309,2311,2316,2320,2322,2323,2324,2325,2326,2327,2331,2332,2333,2334,2335,2343",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "150,140397,140448,140509,140562,140745,141256,141724,141942,141991,142034,142077,142122,142175,142464,142526,142601,142661,142737,143737",
-                        "endLines": "5,2306,2307,2308,2310,2311,2317,2320,2322,2323,2324,2325,2326,2327,2331,2332,2333,2334,2335,2343",
-                        "endColumns": "12,50,60,52,84,53,51,69,48,42,42,44,52,44,61,74,59,75,73,64",
-                        "endOffsets": "249,140443,140504,140557,140740,140794,141415,141789,141986,142029,142072,142117,142170,142215,142521,142596,142656,142732,142806,143797"
-                    }
-                },
-                {
                     "source": "/home/a193532/.gradle/caches/transforms-2/files-2.1/ce178b5b4ef057d8b21f1f9af6d8904b/res/values/values.xml",
                     "from": {
                         "startLines": "2,3",
@@ -133,22 +133,56 @@
                     }
                 },
                 {
-                    "source": "/home/a193532/Downloads/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/src/main/res/values/styles.xml",
+                    "source": "/home/a193532/Imagens/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/src/main/res/values/dimens.xml",
                     "from": {
-                        "startLines": "3,15,10,17",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "54,525,374,617",
-                        "endLines": "8,15,13,17",
-                        "endColumns": "12,90,12,80",
-                        "endOffsets": "368,611,519,693"
+                        "startLines": "2,3,6,5,4",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "88,146,310,260,202",
+                        "endColumns": "57,55,41,49,57",
+                        "endOffsets": "141,197,347,305,255"
                     },
                     "to": {
-                        "startLines": "2353,2359,2360,2364",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "144521,144840,144930,145080",
-                        "endLines": "2358,2359,2363,2364",
-                        "endColumns": "12,89,12,79",
-                        "endOffsets": "144835,144925,145075,145155"
+                        "startLines": "2064,2065,2122,2184,2185",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "125398,125456,129147,133036,133086",
+                        "endColumns": "57,55,41,49,57",
+                        "endOffsets": "125451,125507,129184,133081,133139"
+                    }
+                },
+                {
+                    "source": "/home/a193532/Imagens/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "4,2,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "153,55,102",
+                        "endColumns": "45,46,50",
+                        "endOffsets": "194,97,148"
+                    },
+                    "to": {
+                        "startLines": "196,197,198",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "10077,10123,10170",
+                        "endColumns": "45,46,50",
+                        "endOffsets": "10118,10165,10216"
+                    }
+                },
+                {
+                    "source": "/home/a193532/Imagens/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "1,14,15,11,16,5,20,23,27,26,31,30,28,29,10,9,8,7,6,24",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "16,591,642,521,703,120,945,1110,1289,1246,1481,1436,1338,1391,459,384,324,248,174,1180",
+                        "endLines": "4,14,15,11,17,5,21,23,27,26,31,30,28,29,10,9,8,7,6,24",
+                        "endColumns": "12,50,60,52,84,53,51,69,48,42,42,44,52,44,61,74,59,75,73,64",
+                        "endOffsets": "115,637,698,569,881,169,1104,1175,1333,1284,1519,1476,1386,1431,516,454,379,319,243,1240"
+                    },
+                    "to": {
+                        "startLines": "2,2306,2307,2308,2309,2311,2316,2320,2322,2323,2324,2325,2326,2327,2331,2332,2333,2334,2335,2343",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "150,140397,140448,140509,140562,140745,141256,141724,141942,141991,142034,142077,142122,142175,142464,142526,142601,142661,142737,143737",
+                        "endLines": "5,2306,2307,2308,2310,2311,2317,2320,2322,2323,2324,2325,2326,2327,2331,2332,2333,2334,2335,2343",
+                        "endColumns": "12,50,60,52,84,53,51,69,48,42,42,44,52,44,61,74,59,75,73,64",
+                        "endOffsets": "249,140443,140504,140557,140740,140794,141415,141789,141986,142029,142072,142117,142170,142215,142521,142596,142656,142732,142806,143797"
                     }
                 },
                 {
@@ -242,40 +276,6 @@
                         "endLines": "1294,1607",
                         "endColumns": "24,24",
                         "endOffsets": "79766,96599"
-                    }
-                },
-                {
-                    "source": "/home/a193532/Downloads/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/src/main/res/values/dimens.xml",
-                    "from": {
-                        "startLines": "2,3,6,5,4",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "88,146,310,260,202",
-                        "endColumns": "57,55,41,49,57",
-                        "endOffsets": "141,197,347,305,255"
-                    },
-                    "to": {
-                        "startLines": "2064,2065,2122,2184,2185",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "125398,125456,129147,133036,133086",
-                        "endColumns": "57,55,41,49,57",
-                        "endOffsets": "125451,125507,129184,133081,133139"
-                    }
-                },
-                {
-                    "source": "/home/a193532/Downloads/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/src/main/res/values/colors.xml",
-                    "from": {
-                        "startLines": "4,2,3",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "153,55,102",
-                        "endColumns": "45,46,50",
-                        "endOffsets": "194,97,148"
-                    },
-                    "to": {
-                        "startLines": "196,197,198",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "10077,10123,10170",
-                        "endColumns": "45,46,50",
-                        "endOffsets": "10118,10165,10216"
                     }
                 },
                 {
