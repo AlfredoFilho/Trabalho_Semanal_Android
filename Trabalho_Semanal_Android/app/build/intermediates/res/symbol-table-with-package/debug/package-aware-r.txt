@@ -1169,6 +1169,11 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btn1
+id btn2
+id btn3
+id btn4
+id btn5
 id btnAnterior
 id btnAtualizar
 id btnInserir
@@ -1176,6 +1181,7 @@ id btnProximo
 id btnPull
 id btnRemover
 id btnSelecionar
+id btnViaCep
 id btn_enviar
 id button1
 id button2
@@ -1200,6 +1206,7 @@ id collapseActionView
 id container
 id content
 id contentPanel
+id content_main
 id coordinator
 id custom
 id customPanel
@@ -1284,8 +1291,10 @@ id nav_database
 id nav_gallery
 id nav_home
 id nav_host_fragment
+id nav_internet
 id nav_jogo1
 id nav_jogo2
+id nav_jogo3
 id nav_send
 id nav_share
 id nav_slideshow
@@ -1401,6 +1410,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id txtBiografia
 id txtFeedback
+id txtFrase
 id txtOutput
 id txtTentativas
 id uniform
@@ -1488,6 +1498,8 @@ layout fragment_estatisticas
 layout fragment_first
 layout fragment_gallery
 layout fragment_home
+layout fragment_internet
+layout fragment_jogo3
 layout fragment_mail
 layout fragment_name
 layout fragment_puzzle

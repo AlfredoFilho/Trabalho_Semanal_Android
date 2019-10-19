@@ -1,10 +1,10 @@
-#Thu Oct 17 15:10:17 BRT 2019
+#Fri Oct 18 22:27:19 BRT 2019
 path.2=classes.dex
 path.1=classes.dex
 path.0=classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=/home/a193532/Imagens/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/transforms/dexMerger/debug/0
-base.1=/home/a193532/Imagens/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/transforms/dexMerger/debug/1
-base.0=/home/a193532/Imagens/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/transforms/dexMerger/debug/2
+base.2=/home/a193532/Downloads/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/transforms/dexMerger/debug/0
+base.1=/home/a193532/Downloads/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/transforms/dexMerger/debug/1
+base.0=/home/a193532/Downloads/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/transforms/dexMerger/debug/2

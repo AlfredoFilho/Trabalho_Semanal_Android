@@ -21,10 +21,12 @@ import android.widget.Toast;
 import a193532_c195741.ft.unicamp.br.aula03.alunos.AlunosFragment;
 import a193532_c195741.ft.unicamp.br.aula03.alunos.BiografiasFragment;
 import a193532_c195741.ft.unicamp.br.aula03.database.DatabaseFragment;
+import a193532_c195741.ft.unicamp.br.aula03.internet.InternetFragment;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo2.EstatisticasFragment;
 import a193532_c195741.ft.unicamp.br.aula03.kotlin.KotlinActivity;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo2.NameFragment;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo1.PuzzleFragment;
+import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.Jogo3Fragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, AlunosFragment.OnBiografiaRequest {
@@ -147,8 +149,13 @@ public class MainActivity extends AppCompatActivity
                 nameFragment = new NameFragment();
                 nameFragment.setOnBiografiaRequest(this);
             }
-            replaceFragment(nameFragment, "name");
-        } else if (id == R.id.nav_Kotlin){
+        } else if (id == R.id.nav_jogo3){
+            Fragment jogo3Fragment = fragmentManager.findFragmentByTag("jogo3_Fragment");
+            if (jogo3Fragment == null) {
+                jogo3Fragment = new Jogo3Fragment();
+                replaceFragment(jogo3Fragment, "jogo3_Fragment");
+            }
+        }else if (id == R.id.nav_Kotlin){
             Intent intent = new Intent(this, KotlinActivity.class);
             intent.putExtra("chave","string inicial");
             startActivity(intent);
@@ -158,6 +165,13 @@ public class MainActivity extends AppCompatActivity
             if (databaseFragment == null)
                 databaseFragment = new DatabaseFragment();
             replaceFragment(databaseFragment, "database_Fragment");
+        }
+
+        else if (id == R.id.nav_internet){
+            Fragment interFragment = fragmentManager.findFragmentByTag("internet_Fragment");
+            if (interFragment == null)
+                interFragment = new InternetFragment();
+            replaceFragment(interFragment, "internet_Fragment");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
