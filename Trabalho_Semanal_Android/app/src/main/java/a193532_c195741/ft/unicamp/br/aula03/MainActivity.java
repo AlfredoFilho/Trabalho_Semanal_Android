@@ -144,17 +144,15 @@ public class MainActivity extends AppCompatActivity
                 puzzleFragment = new PuzzleFragment();
             replaceFragment(puzzleFragment, "puzzle_Fragment");
         } else if (id == R.id.nav_jogo2) {
-            NameFragment nameFragment = (NameFragment) fragmentManager.findFragmentByTag("name");
-            if (nameFragment == null) {
+            Fragment nameFragment = fragmentManager.findFragmentByTag("jogo2_Fragment");
+            if (nameFragment == null)
                 nameFragment = new NameFragment();
-                nameFragment.setOnBiografiaRequest(this);
-            }
+            replaceFragment(nameFragment, "jogo2_Fragment");
         } else if (id == R.id.nav_jogo3){
             Fragment jogo3Fragment = fragmentManager.findFragmentByTag("jogo3_Fragment");
-            if (jogo3Fragment == null) {
+            if (jogo3Fragment == null)
                 jogo3Fragment = new Jogo3Fragment();
-                replaceFragment(jogo3Fragment, "jogo3_Fragment");
-            }
+            replaceFragment(jogo3Fragment, "jogo3_Fragment");
         }else if (id == R.id.nav_Kotlin){
             Intent intent = new Intent(this, KotlinActivity.class);
             intent.putExtra("chave","string inicial");

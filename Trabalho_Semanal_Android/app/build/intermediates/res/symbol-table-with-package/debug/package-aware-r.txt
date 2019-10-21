@@ -1133,6 +1133,7 @@ id ALT
 id CTRL
 id FUNCTION
 id LinearLayout
+id LinearLayout02
 id META
 id SHIFT
 id SYM
@@ -1169,14 +1170,11 @@ id barrier
 id beginning
 id blocking
 id bottom
-id btn1
-id btn2
-id btn3
-id btn4
-id btn5
 id btnAnterior
 id btnAtualizar
+id btnChecar
 id btnInserir
+id btnProx
 id btnProximo
 id btnPull
 id btnRemover
@@ -1264,6 +1262,7 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id iv_divider
 id labeled
 id largeLabel
 id left
@@ -1304,6 +1303,11 @@ id navigation_header_container
 id never
 id new_grid_button
 id nome
+id nome1
+id nome2
+id nome3
+id nome4
+id nome5
 id none
 id normal
 id notification_background
@@ -1320,7 +1324,9 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id radioGroup
 id recycler_view
+id resultado
 id right
 id right_icon
 id right_side
@@ -1413,6 +1419,8 @@ id txtFeedback
 id txtFrase
 id txtOutput
 id txtTentativas
+id txtTitulo
+id txtTituloNomes
 id uniform
 id unlabeled
 id up
