@@ -26,6 +26,8 @@ import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo2.EstatisticasFragment;
 import a193532_c195741.ft.unicamp.br.aula03.kotlin.KotlinActivity;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo2.NameFragment;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo1.PuzzleFragment;
+import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.AlunosFraseFragment;
+import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.FrasesAlunoFragment;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.Jogo3Fragment;
 
 public class MainActivity extends AppCompatActivity
@@ -175,6 +177,20 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void replaceAlunosfrase(){
+        Fragment alunosFrase = fragmentManager.findFragmentByTag("alunosFrase_Fragment");
+        if (alunosFrase == null)
+            alunosFrase = new AlunosFraseFragment();
+        replaceFragment(alunosFrase, "alunosFrase_Fragment");
+    }
+
+    public void replaceFrasesAluno(){
+        Fragment alunosFrase = fragmentManager.findFragmentByTag("frasesAluno_Fragment");
+        if (alunosFrase == null)
+            alunosFrase = new FrasesAlunoFragment();
+        replaceFragment(alunosFrase, "frasesAluno_Fragment");
     }
 
     public void replaceFragment(Fragment fragment, String tag) {

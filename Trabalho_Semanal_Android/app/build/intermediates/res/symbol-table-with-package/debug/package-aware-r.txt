@@ -1133,7 +1133,6 @@ id ALT
 id CTRL
 id FUNCTION
 id LinearLayout
-id LinearLayout02
 id META
 id SHIFT
 id SYM
@@ -1163,6 +1162,7 @@ id activity_chooser_view_content
 id add
 id alertTitle
 id all
+id alunosFrase
 id always
 id async
 id auto
@@ -1174,7 +1174,6 @@ id btnAnterior
 id btnAtualizar
 id btnChecar
 id btnInserir
-id btnProx
 id btnProximo
 id btnPull
 id btnRemover
@@ -1201,6 +1200,7 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id comecar
 id container
 id content
 id contentPanel
@@ -1229,6 +1229,7 @@ id end
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id escolherJogo
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1240,6 +1241,12 @@ id filled
 id fixed
 id forever
 id frame
+id frase1
+id frase2
+id frase3
+id frase4
+id frase5
+id frasesAluno
 id ghost_view
 id gone
 id grid_layout
@@ -1263,6 +1270,7 @@ id invisible
 id italic
 id item_touch_helper_previous_elevation
 id iv_divider
+id jogo3frag
 id labeled
 id largeLabel
 id left
@@ -1417,6 +1425,7 @@ id transition_transform
 id txtBiografia
 id txtFeedback
 id txtFrase
+id txtNomeAluno
 id txtOutput
 id txtTentativas
 id txtTitulo
@@ -1499,11 +1508,13 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_alunos
+layout fragment_alunosfrase
 layout fragment_autores
 layout fragment_biografias
 layout fragment_database
 layout fragment_estatisticas
 layout fragment_first
+layout fragment_frases_aluno
 layout fragment_gallery
 layout fragment_home
 layout fragment_internet

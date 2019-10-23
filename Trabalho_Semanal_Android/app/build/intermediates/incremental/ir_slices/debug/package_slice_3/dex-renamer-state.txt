@@ -1,4 +1,4 @@
-#Wed Oct 16 17:24:19 BRT 2019
+#Wed Oct 23 12:59:13 BRST 2019
 base.0=/home/a193532/Downloads/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/transforms/dexMerger/debug/3
 path.0=classes.dex
 renamed.0=classes.dex
