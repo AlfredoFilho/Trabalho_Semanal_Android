@@ -30,6 +30,7 @@ animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
 array grid_options
+array rest_requests
 attr action
 attr actionBarDivider
 attr actionBarItemBackground
@@ -1334,6 +1335,7 @@ id progress_horizontal
 id radio
 id radioGroup
 id recycler_view
+id restSpinner
 id resultado
 id right
 id right_icon

@@ -31,4 +31,13 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
 
+
+        <string-array name="rest_requests">
+            <item>GET</item>
+            <item>PUT</item>
+            <item>POST</item>
+            <item>PATCH</item>
+        </string-array>
+
+
 </resources>
