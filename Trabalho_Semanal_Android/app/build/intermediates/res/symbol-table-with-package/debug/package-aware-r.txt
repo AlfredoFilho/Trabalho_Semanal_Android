@@ -1231,6 +1231,8 @@ id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id escolherJogo
+id estjogo3aluno
+id estjogo3frase
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1425,6 +1427,8 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id txtBiografia
+id txtEstAlunos
+id txtEstFrases
 id txtFeedback
 id txtFrase
 id txtNomeAluno
@@ -1514,6 +1518,8 @@ layout fragment_alunosfrase
 layout fragment_autores
 layout fragment_biografias
 layout fragment_database
+layout fragment_estat_alunos_frase
+layout fragment_estat_frases_aluno
 layout fragment_estatisticas
 layout fragment_first
 layout fragment_frases_aluno

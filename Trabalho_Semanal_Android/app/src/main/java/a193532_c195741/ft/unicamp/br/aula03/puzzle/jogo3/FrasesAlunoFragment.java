@@ -20,6 +20,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import a193532_c195741.ft.unicamp.br.aula03.R;
+import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.firebase.FirebaseJogo3Alunos;
+import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.firebase.FirebaseJogo3Frases;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +31,9 @@ public class FrasesAlunoFragment extends Fragment {
     private View lview;
     TextView textView;
     TextView txtResult;
+    String url = "https://estatisticasjogo3.firebaseio.com/Database/Jogo_FrasesAluno";
+    int erro;
+    int acertos;
 
     String fraseCorreta;
 
@@ -79,6 +84,49 @@ public class FrasesAlunoFragment extends Fragment {
         return lview;
     }
 
+    public void firebase(){
+
+        String comando = "GET";
+        String urlGet = url + "/.json";
+
+        new FirebaseJogo3Frases(this).execute(urlGet, comando);
+
+    }
+
+    public void atualizaFirebase(JSONObject jsonObject){
+
+        String comando = "PATCH";
+        String nomeSemEspaco = textView.getText().toString().replaceAll(" ", "_");
+        // String nomeSemEspaco = "Alfredo";
+
+        if((jsonObject.toString().toLowerCase().contains(nomeSemEspaco.toLowerCase())) == true){
+            try {
+                int acertosDB = jsonObject.getJSONObject(nomeSemEspaco).getInt("Acertos");
+                int errosDB = jsonObject.getJSONObject(nomeSemEspaco).getInt("Erros");
+
+                int acertoAtt = acertosDB + acertos;
+                int errosAtt = errosDB + erro;
+
+
+                String jsonInsert = "{\"Acertos\": \""+acertoAtt+"\", \"Erros\": \""+errosAtt+"\"}";
+                String urlInsert = url + "/"+nomeSemEspaco+"/.json";
+
+                new FirebaseJogo3Frases(this).execute(urlInsert, comando, jsonInsert);
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }else{
+            String jsonInsert = "{\""+nomeSemEspaco+"\":{\"Acertos\":\""+Integer.toString(acertos)+"\",\"Erros\":\""+Integer.toString(erro)+"\"}}";
+            String urlInsert = url + "/.json";
+            new FirebaseJogo3Frases(this).execute(urlInsert, comando, jsonInsert);
+
+        }
+        acertos = 0;
+        erro = 0;
+
+    }
+
     public void proximoJogo(){
 
         textView.setText("");
@@ -110,6 +158,9 @@ public class FrasesAlunoFragment extends Fragment {
             }
         }, 1500);
 
+        acertos = 1;
+        firebase();
+
     }
 
     public void checar(){
@@ -136,6 +187,9 @@ public class FrasesAlunoFragment extends Fragment {
                     txtResult.setText("");
                 }
             }, 1000);
+
+            erro = 1;
+            firebase();
         }
     }
 

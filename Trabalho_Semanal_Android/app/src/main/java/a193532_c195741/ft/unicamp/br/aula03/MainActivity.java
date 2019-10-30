@@ -27,6 +27,8 @@ import a193532_c195741.ft.unicamp.br.aula03.kotlin.KotlinActivity;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo2.NameFragment;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo1.PuzzleFragment;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.AlunosFraseFragment;
+import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.Estatisticas.EstatAlunosFrase;
+import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.Estatisticas.EstatFrasesAluno;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.FrasesAlunoFragment;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.Jogo3Fragment;
 
@@ -104,7 +106,20 @@ public class MainActivity extends AppCompatActivity
                 estatisticasFragment = new EstatisticasFragment();
             }
             replaceFragment(estatisticasFragment, "estatisticas_fragment");
+        }else if (id == R.id.estjogo3aluno) {
+            Fragment estatAlunosFrase = fragmentManager.findFragmentByTag("estatAlunosFrase_fragment");
+            if (estatAlunosFrase == null) {
+                estatAlunosFrase = new EstatAlunosFrase();
+            }
+            replaceFragment(estatAlunosFrase, "estatAlunosFrase_fragment");
+        }else if (id == R.id.estjogo3frase) {
+            Fragment estatFrasesAluno = fragmentManager.findFragmentByTag("estatFrasesAluno_fragment");
+            if (estatFrasesAluno == null) {
+                estatFrasesAluno = new EstatFrasesAluno();
+            }
+            replaceFragment(estatFrasesAluno, "estatFrasesAluno_fragment");
         }
+
 
         return super.onOptionsItemSelected(item);
     }
