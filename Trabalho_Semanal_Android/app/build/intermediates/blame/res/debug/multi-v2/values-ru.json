@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/a193532/Downloads/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ru/values-ru.xml",
+            "outputFile": "/home/alfredo/Música/Trabalho_Semanal_Android/Trabalho_Semanal_Android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ru/values-ru.xml",
             "map": [
                 {
-                    "source": "/home/a193532/.gradle/caches/transforms-2/files-2.1/ce178b5b4ef057d8b21f1f9af6d8904b/res/values-ru/values-ru.xml",
+                    "source": "/home/alfredo/.gradle/caches/transforms-2/files-2.1/0f15b097a783f641f224ae4dcaa975c0/res/values-ru/values-ru.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/a193532/.gradle/caches/transforms-2/files-2.1/556cf32e48cb0614b46c8ae6f92533a0/res/values-ru/values-ru.xml",
+                    "source": "/home/alfredo/.gradle/caches/transforms-2/files-2.1/a73b5622ecb49d371714449bd6516bdf/res/values-ru/values-ru.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/home/a193532/.gradle/caches/transforms-2/files-2.1/f6c8aa31d856a64fda9efeb478f00591/res/values-ru/values-ru.xml",
+                    "source": "/home/alfredo/.gradle/caches/transforms-2/files-2.1/f715502ee3064e926240f601c5cf10fd/res/values-ru/values-ru.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

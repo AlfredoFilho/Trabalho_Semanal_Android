@@ -27,8 +27,8 @@ import a193532_c195741.ft.unicamp.br.aula03.kotlin.KotlinActivity;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo2.NameFragment;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo1.PuzzleFragment;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.AlunosFraseFragment;
-import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.Estatisticas.EstatAlunosFrase;
-import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.Estatisticas.EstatFrasesAluno;
+import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.estatisticas.EstatAlunosFrase;
+import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.estatisticas.EstatFrasesAluno;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.FrasesAlunoFragment;
 import a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.Jogo3Fragment;
 

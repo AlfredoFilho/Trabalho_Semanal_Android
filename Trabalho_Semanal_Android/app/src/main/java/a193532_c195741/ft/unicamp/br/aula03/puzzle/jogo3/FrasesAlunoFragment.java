@@ -72,6 +72,19 @@ public class FrasesAlunoFragment extends Fragment {
         frase4 = lview.findViewById(R.id.frase4);
         frase5 = lview.findViewById(R.id.frase5);
 
+        textView.setText("");
+        txtResult.setText("");
+
+        frase1.setText("");
+        frase2.setText("");
+        frase3.setText("");
+        frase4.setText("");
+        frase5.setText("");
+
+        listaFrases.clear();
+
+        radioGroup.clearCheck();
+
         new MyFrasesAlunoAsyncTask(this).execute();
 
         lview.findViewById(R.id.btnChecar).setOnClickListener(new View.OnClickListener() {

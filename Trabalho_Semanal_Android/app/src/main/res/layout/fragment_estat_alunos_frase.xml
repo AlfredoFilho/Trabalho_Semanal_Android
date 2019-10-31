@@ -1,8 +1,8 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.Estatisticas.EstatAlunosFrase">
+    tools:context="a193532_c195741.ft.unicamp.br.aula03.puzzle.jogo3.estatisticas.EstatAlunosFrase">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -11,11 +11,14 @@
         android:orientation="vertical">
 
         <TextView
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold"
             android:paddingLeft="10dp"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Estatisticas Jogo3AlunosFrase" />
+            android:text="Estatisticas Jogo3 AlunosFrase" />
 
         <TextView
             android:layout_marginLeft="10dp"
@@ -27,4 +30,4 @@
     </LinearLayout>
 
 
-</FrameLayout>
+</ScrollView>
